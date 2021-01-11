@@ -8,12 +8,6 @@ const person = {
 
 const hobbies = ['Sport', 8];
 
-// For each
-hobbies.forEach(hobby => {
-    console.log(hobby)
-});
-
-// Map array
-console.log(hobbies.map(hobby => {
-    return 'Hobby: ' + hobby;
-}));
+// Reference type
+hobbies.push('Programming');
+console.log(hobbies);
