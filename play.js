@@ -6,8 +6,17 @@ const person = {
     }
 }
 
-const hobbies = ['Sport', 8];
+const hobbies = ['Sport', 'Programming'];
 
-// Reference type
-hobbies.push('Programming');
+// SPREAD operator, extract all hobbies array into new []
+const copiedArray = [...hobbies];
+
 console.log(hobbies);
+console.log(copiedArray);
+
+// REST operator, merge all arguments into an array
+const toArray = (...args) => {
+    return args;
+};
+
+console.log(toArray(1, 2, 3, 4, 5));
