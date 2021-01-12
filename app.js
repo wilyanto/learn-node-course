@@ -5,10 +5,9 @@ const server = http.createServer((req, res) => {
     const url = req.url;
     const method = req.method;
     if (url === '/') {
-        console.log('hlo');
         res.write('<html>');
         res.write('<head><title>My Second Page</title></head>');
-        res.write('<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit>Send/button></form></body>');
+        res.write('<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>');
         res.write('</html>');
         return res.end();
     }
