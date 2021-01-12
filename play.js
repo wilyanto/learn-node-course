@@ -18,3 +18,9 @@ setTimeout(() => {
         console.log(text2);
     });
 }, 2000);
+
+const name = 'a';
+const age = 2;
+
+// Template literals, using `` instead of '' or ""
+console.log(`name is ${name}, aged ${age}`);
