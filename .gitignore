@@ -1,2 +1,4 @@
 message.txt
 node_modules
+.vscode/*
+!.vscode/launch.json
