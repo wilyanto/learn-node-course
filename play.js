@@ -6,17 +6,19 @@ const person = {
     }
 }
 
-const hobbies = ['Sport', 'Programming'];
+const printName = ({ name, age }) => {
+    console.log(name);
+}
 
-// SPREAD operator, extract all hobbies array into new []
-const copiedArray = [...hobbies];
+printName(person);
 
-console.log(hobbies);
-console.log(copiedArray);
+// Destructuring
+const {name, age} = person;
 
-// REST operator, merge all arguments into an array
-const toArray = (...args) => {
-    return args;
-};
+console.log(age);
 
-console.log(toArray(1, 2, 3, 4, 5));
+const hobbies = ['Sports', 'Programming'];
+
+const [hobby1, hobby2] = hobbies;
+
+console.log(hobby1, hobby2);
