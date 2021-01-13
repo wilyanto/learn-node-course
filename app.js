@@ -7,9 +7,10 @@ const app = express();
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false})); // parsing Request body
+app.use(express.static(path.join(__dirname, 'public'))); // access static folder
 
-app.use('/admin', adminRoutes);
+app.use('/admin', adminRoutes); 
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
