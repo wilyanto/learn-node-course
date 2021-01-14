@@ -79,6 +79,7 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
+  // only get this user's product (by userId as product's PK)
   req.user
     .getProducts()
     .then((products) => {
